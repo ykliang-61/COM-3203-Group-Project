@@ -1,0 +1,619 @@
+/* headline */
+.hero {
+position: relative;
+width: 100%;
+height: 60vh;
+background: url("./img1.jpg") center/cover no-repeat;
+}
+
+.hero::after {
+content: "";
+position: absolute;
+inset: 0;
+background: rgba(2, 16, 36, 0.45);
+}
+
+.hero-content {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+text-align: center;
+z-index: 2;
+width: 90%;
+}
+
+.hero-title {
+font-size: 3.0rem;
+font-weight: 700;
+color: #C1E8FF;
+margin-bottom: 1rem;
+text-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+
+/* Intro */
+.intro-quote {
+    padding: 50px 20px 10px;
+    background-color: #052659;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.quote-box {
+    max-width: 960px;
+    width:100%;
+    text-align: center;
+    margin:0 auto;
+}
+
+.quote-text {
+    font-size: 20px;
+    line-height: 1.6;
+    color: #C1E8FF;
+    font-style: italic;
+    margin-bottom: 10px;
+    text-align:left;
+}
+
+/* Switch Tab */
+.tab-container {
+    max-width: 960px;
+    margin: 0 auto;
+    width:100%;
+}
+
+.tab-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.tab-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #CBD5E1;
+    color: #1E293B;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.tab-button.active {
+    background-color: #3182ce;
+    color: white;
+}
+
+.tab-button:hover {
+    background-color: #94A3B8;
+    color: #1E293B;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.tab-hint{
+    text-align: center;
+    font-size: 16px;
+    color:#949494;
+    margin:20px auto;
+}
+
+
+/* Trend Line Chart Styles */
+.trend-container {
+    max-width: 960px;
+    margin: 0 auto;
+    width:100%;
+    background-color: white;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    color: #000000;
+}
+
+.trend-title {
+    color: #1a365d;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.trend-subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 30px;
+    font-size: 16px;
+}
+
+.trend-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #f0f7ff;
+    border-radius: 8px;
+    align-items: center;
+    justify-content: center;
+}
+
+.district-checkboxes {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 12px;
+    width: 100%;
+    max-height: 200px;
+    overflow-y: auto;
+    padding: 15px;
+    background-color: white;
+    border-radius: 6px;
+    border: 1px solid #e2e8f0;
+}
+
+.checkbox-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+}
+
+.button-group {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.button-group button {
+    padding: 8px 16px;
+    background-color: #3182ce;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.button-group button:hover {
+    background-color: #2c5282;
+}
+
+button.reset {
+    background-color: #718096;
+}
+
+button.reset:hover {
+    background-color: #4a5568;
+}
+
+.chart-container {
+    position: relative;
+}
+
+.tooltip {
+    position: absolute;
+    padding: 12px 16px;
+    background-color: rgba(255, 255, 255, 0.98);
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    pointer-events: none;
+    font-size: 14px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+    min-width: 180px;
+    backdrop-filter: blur(4px);
+}
+
+#trend-tooltip h3 {
+    margin: 0 0 8px 0;
+    color: #2d3748;
+    font-size: 14px;
+    border-bottom: 1px solid #e2e8f0;
+    padding-bottom: 4px;
+}
+
+
+/* Overview of the vacancy rate */
+.trend-note-section {
+    padding: 24px 30px;
+    background: transparent;
+    text-align: left;
+}
+
+.trend-explanation {
+    max-width: 960px;
+    margin: 10px auto 30px;
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+/* Map Styles */
+.trend-container {
+    max-width: 960px;
+    width:100%;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    color: #000000;
+}
+
+.vacancy-map-section {
+    max-width:960px;
+    margin:0 auto;
+    width:100%;
+}
+
+.section-title {
+    color: #1a365d;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 30px;
+    font-size: 16px;
+}
+
+/* Centered map frame */
+.map-wrapper {
+    width:100%;
+    max-width:960px;
+    margin:0 auto;
+    padding: 30px;
+    border-radius: 12px;
+    background-color: #ffffff;
+    position: relative;
+    box-shadow:0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+#vacancy-map {
+    width: 100%;
+    height: auto;
+}
+
+/* Tooltip */
+.map-tooltip {
+    position: absolute;
+    background: #3182ce;
+    color: #fff;
+    padding: 10px 14px;
+    border-radius: 6px;
+    pointer-events: none;
+    font-size: 14px;
+    line-height: 1.4;
+    max-width: 250px;
+    transition: opacity 0.2s ease;
+}
+
+/*Public market unwelcome in wealthy districts*/
+.wealthy{
+    max-width:960px;
+    margin:0 auto;
+    width:100%;
+    background-color: #052659;
+    padding: 40px 40px;
+    
+}
+
+.macro-container {
+    max-width: 960px;
+    width: 100%;
+    margin:0 auto;
+}
+
+
+.macro-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #C1E8FF;
+}
+
+.macro-text {
+    font-size: 20px;
+    line-height: 1.6;
+    color: #C1E8FF;
+    margin-bottom: 16px;
+}
+
+/* Central & Western Bar Chart */
+.cw-chart-wrapper {
+    max-width: 960px;
+    margin: 0px auto;
+    width:100%;
+    background: rgb(255, 255, 255);
+    padding: 0px;
+    border-radius: 12px;
+}
+
+/*font color*/
+.cw-chart-wrapper,
+.cw-chart-wrapper h2,
+.cw-chart-wrapper p,
+.cw-chart-wrapper text {
+    color: #000000 !important;
+    fill: #000000 !important;
+}
+
+.cw-bar-chart-section {
+    text-align: center;
+    margin: 10px auto;
+}
+
+#cw-bar-chart {
+    width: 100%;
+    max-width:960px;
+    height: 600px;
+}
+
+.cw-bar {
+    opacity: 0.8;
+}
+
+.cw-label {
+    font-size: 12px;
+    text-anchor: middle;
+    fill: black;
+}
+
+.cw-axis-label {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/*The path to rival demands targeted strategies*/
+.path {
+    max-width: 960px;
+    margin:0 auto;
+    width:100%;
+    background-color: #052659;
+    padding: 40px 40px;
+}
+
+.micro-container {
+    max-width: 960px;
+    width: 100%;
+    margin:0 auto;
+}
+
+
+.micro-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #C1E8FF;
+}
+
+.micro-text {
+    font-size: 20px;
+    line-height: 1.6;
+    color: #C1E8FF;
+    margin-bottom: 16px;
+}
+
+/*scatter plot*/
+.scatter-container {
+    max-width: 960px;
+    width:100%;
+    margin: 0px auto;
+    padding: 25px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.scatter-title {
+    text-align: center;
+    font-size: 24px;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+/* Chart central container */
+.chart-container {
+    width:100%;
+    max-width:960px;
+    margin:0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding-bottom:20px;
+}
+
+#scatter-plot{
+    width:100%;
+    max-width: 960px;
+    margin:0 auto;
+}
+
+/* Tooltip */
+.tooltip {
+    position: absolute;
+    padding: 12px;
+    background-color: rgba(255, 255, 255, 0.95);
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    pointer-events: none;
+    font-size: 14px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    z-index: 100;
+    color: #000000 !important;
+}
+
+/* Legend */
+.legend {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color:#000000;
+}
+
+.legend-color {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+/* Stats panel */
+.stats {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f0f7ff;
+    border-radius: 8px;
+}
+
+.stat-item {
+    text-align: center;
+    min-width: 150px;
+    padding: 10px;
+}
+
+.stat-value {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2d3748;
+}
+
+.stat-label {
+    font-size: 14px;
+    color: #4a5568;
+}
+
+/* Make axis text visible */
+#scatter-plot text {
+    fill: #000000 !important;
+}
+
+
+
+/* FEHD VS NGO */
+.final-section {
+    color: #fff;
+    padding: 40px 40px;
+    border-radius: 12px;
+    max-width: 960px;
+    margin: 0px auto;
+    width:100%;
+    line-height: 1.6;
+}
+
+.final-single-block {
+    margin-bottom: 35px;
+    font-size:20px;
+}
+
+.final-divider {
+    border: none;
+    border-top: 1px solid #777;
+    margin: 20px 0;
+}
+
+/* COLUMNS */
+.final-columns {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    align-items: flex-start;
+    position: relative;
+}
+
+.final-col {
+    width: 48%;
+    font-size:20px
+}
+
+.final-col h3 {
+    margin-bottom: 15px;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #C1E8FF;
+}
+
+.final-midline {
+    width: 1px;
+    background-color: #777;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    top: 0;
+}
+
+
+/* Reference */
+.reference-section {
+    max-width: 960px;
+    margin: 0 auto;
+    width:100%;
+    color: #fff;
+    padding:0px;
+}
+
+.ref-details summary {
+    cursor: pointer;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #C1E8FF;
+    padding: 10px 0;
+    transition: 0.2s ease;
+}
+
+.ref-details summary:hover {
+    color: #2b6cb0;
+}
+
+.ref-details[open] summary {
+    margin-bottom: 15px;
+}
+
+.ref-details ul {
+    padding-left: 20px;
+    animation: fadeIn 0.4s ease;
+    line-height: 1.6;
+    font-size:18px;
+}
+
+
+/* Footer */
+.project-footer {
+    color: #ccc;
+    text-align: center;
+    padding: 25px 0 35px;
+    font-size: 14px;
+    letter-spacing: 0.4px;
+    margin: 20px auto;
+}
+
+.project-footer p {
+    margin: 5px 0;
+}
